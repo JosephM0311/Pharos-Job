@@ -12,7 +12,7 @@ https://docs.djangoproject.com/en/4.0/ref/settings/
 import os
 from pathlib import Path
 from django.contrib.messages import constants as messages
-
+import dj_database_url
 
 MESSAGE_TAGS = {
     messages.DEBUG: 'alert-secondary',
@@ -25,7 +25,7 @@ MESSAGE_TAGS = {
 # Build paths inside the project like this: BASE_DIR / 'subdir'.
 BASE_DIR = Path(__file__).resolve().parent.parent.parent
 
-# STATIC_URL = '/static/'
+STATIC_URL = '/static/'
 # Directory where uploaded media is saved.
 MEDIA_ROOT = os.path.join(
     BASE_DIR, "jobsearching\jobwebsite\static\images")
@@ -169,7 +169,7 @@ TEMPLATE_CONTEXT_PROCESSORS = (
 )
 
 # Update database configuration from $DATABASE_URL.
-import dj_database_url
+
 db_from_env = dj_database_url.config(conn_max_age=500)
 DATABASES['default'].update(db_from_env)
 
