@@ -31,7 +31,7 @@ MEDIA_ROOT = os.path.join(
     BASE_DIR, "jobsearching\jobwebsite\static\images")
 MEDIA_URL = '/images/'  # Public URL at the browser
 STATICFILES_DIRS = [os.path.join(
-    BASE_DIR, "jobsearching\jobwebsite\static"), ]
+    BASE_DIR, "jobsearching\jobwebsite\static\"), ]
 
 
 # Quick-start development settings - unsuitable for production
